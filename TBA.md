@@ -1,0 +1,49 @@
+- Informações Pessoais
+  - Foto de Perfil
+  - Nome
+  - E-mail
+  - Telefone
+  - Idioma
+    - Padrão PT/BR, Espanhol e Inglês em destaque
+  - Endereço de casa
+
+- Segurança e Privacidade
+  - Segurança da conta
+    - Vincular celular/e-mail
+    - Vincular Gov
+    - Verificação de duas etapas
+      - Códigos de recuperação
+    - Chaves de acesso
+    - Revisar atividades de segurança
+    - Dispositivos conectados/Sessões ativas
+
+  - Privacidade
+    - Anonimato
+      - Ocultar foto de perfil
+      - Ocultar nome
+    - Usuários bloqueados
+    - Excluir histórico
+    - Excluir conta
+
+- Notificações
+  - Receber notificações quando uma denúncia for respondida
+    - Por gestores (agentes do governo)
+    - Por outros cidadãos
+  - Receber notificações quando uma denúncia for resolvida
+  - Receber notificações de denúncias próximas à sua área
+  - Receber notificações de respostas à um comentário seu
+
+- Aparência e Acessibilidade
+  - Tema
+    - Claro
+    - Escuro
+      - 50%
+      - 100%
+    - Padrão do sistema
+  - Tamanho da fonte
+  - Escala dos botões
+    - 50%
+    - 100% (padrão)
+    - 150%
+    - 200%
+  - Audiodescrição
