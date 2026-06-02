@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #a424d6;
+    background-color: #E8E8E8;
 }
 
 /*
@@ -16,14 +16,14 @@ main {
     padding: 10px;
 }
 */
-
-div.whiteboxthing {
-    width: 300px;
-    height: 400px;
+/* vvv loginPage e registerPage vvv */
+.loginRegisterBox {
+    width: 450px;
+    height: 500px;
     margin: auto;
     margin-top: 50px;
     background-color: #f0f0f0;
-    box-shadow: 3px 3px 5px #000;
+    box-shadow: 3px 3px 5px #c0c0c0;
     padding: 10px;
     flex-direction: column;
     display: flex;
@@ -37,13 +37,34 @@ input.inputstyle {
     margin-left: center;
     border-radius: 8px;
     font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #E8E8E8;
+}
+
+a.navigationButton {
+    margin-top: 40px;
+    width: 200px;
+    height: 10px;
+    background-color: #213F65;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 18px 10px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 button.buttonstyle {
     margin-top: 40px;
     width: 100px;
     height: 30px;
-    background-color: #a424d6;
+    background-color: #213F65;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -54,3 +75,12 @@ button.buttonstyle {
     align-items: center;
     justify-content: center;
 }
+
+img.govBr {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+}
+
+
+/* ^^^ loginPage e registerPage ^^^ */
