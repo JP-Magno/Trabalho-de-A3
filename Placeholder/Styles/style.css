@@ -16,8 +16,10 @@ main {
     padding: 10px;
 }
 */
+
 /* vvv loginPage e registerPage vvv */
-.loginRegisterBox {
+div.loginRegisterBox {
+    position: relative;
     width: 450px;
     height: 500px;
     margin: auto;
@@ -31,16 +33,112 @@ main {
     border-radius: 8px;
 }
 
+div.registerBox {
+    position: relative;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+
+    background-color: #f0f0f0;
+    box-shadow: 3px 3px 5px #c0c0c0;
+    
+    justify-content: flex-start;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 8px;
+}
+
+div.registerBox h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+div.registerBox h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.registerBox .buttonstyle {
+    align-self: center;
+    width: auto;
+    margin-top: 20px;
+}
+
+.registerBox input.inputstyle {
+    margin-top: 5px;
+}
+
+.registerBox div.lineInput {
+    margin-top: 5px;
+}
+
+.registerBox input.lineInput {
+    margin-top: 5px;
+}
+
+.registerBox input.inputRegister {
+    margin-top: 5px;
+}
+
+div.lineInput {
+    position: relative;
+    right: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
 input.inputstyle {
-    position: center;
+    position: relative;
     margin-top: 40px;
-    margin-left: center;
     border-radius: 8px;
     font-size: 24px;
     padding: 6px 10px;
     outline: none;
     border: none;
-    background-color: #E8E8E8;
+    background-color: #35678933;
+}
+
+.flatpickr-current-month .numInputWrapper {
+  font-size: 24px;
+  width: 100px;
+}
+
+.flatpickr-current-month input.cur-year {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input.inputRegister {
+    width: 160px;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #35678933;
+}
+
+input.lineInput {
+    width: 195px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #35678933;
 }
 
 a.navigationButton {
@@ -67,7 +165,7 @@ button.buttonstyle {
     background-color: #213F65;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 14px;
     cursor: pointer;
     padding: 18px 60px;
     font-size: 24px;
@@ -81,6 +179,5 @@ img.govBr {
   width: auto;
   vertical-align: middle;
 }
-
 
 /* ^^^ loginPage e registerPage ^^^ */
