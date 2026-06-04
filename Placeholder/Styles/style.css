@@ -1,6 +1,29 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('Nunito/static/Nunito-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('Nunito/static/Nunito-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('Nunito/static/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+}
+
 * {
-    font-family: nunito-light, nunito-medium, nunito-bold;
+    font-family: 'Nunito';
     font-size: 16px;
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 700;
 }
 
 body {
@@ -18,6 +41,15 @@ main {
 */
 
 /* vvv loginPage e registerPage vvv */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: none;
+}
+
 div.loginRegisterBox {
     position: relative;
     width: 450px;
@@ -31,114 +63,6 @@ div.loginRegisterBox {
     display: flex;
     align-items: center;
     border-radius: 8px;
-}
-
-div.registerBox {
-    position: relative;
-    width: 450px;
-    height: 500px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 20px;
-
-    background-color: #f0f0f0;
-    box-shadow: 3px 3px 5px #c0c0c0;
-    
-    justify-content: flex-start;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    border-radius: 8px;
-}
-
-div.registerBox h1 {
-    width: 100%;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-size: 26px;
-}
-
-div.registerBox h2 {
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-.registerBox .buttonstyle {
-    align-self: center;
-    width: auto;
-    margin-top: 20px;
-}
-
-.registerBox input.inputstyle {
-    margin-top: 5px;
-}
-
-.registerBox div.lineInput {
-    margin-top: 5px;
-}
-
-.registerBox input.lineInput {
-    margin-top: 5px;
-}
-
-.registerBox input.inputRegister {
-    margin-top: 5px;
-}
-
-div.lineInput {
-    position: relative;
-    right: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-input.inputstyle {
-    position: relative;
-    margin-top: 40px;
-    border-radius: 8px;
-    font-size: 24px;
-    padding: 6px 10px;
-    outline: none;
-    border: none;
-    background-color: #35678933;
-}
-
-.flatpickr-current-month .numInputWrapper {
-  font-size: 24px;
-  width: 100px;
-}
-
-.flatpickr-current-month input.cur-year {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-input.inputRegister {
-    width: 160px;
-    margin-top: 40px;
-    border-radius: 8px;
-    font-size: 24px;
-    padding: 6px 10px;
-    outline: none;
-    border: none;
-    background-color: #35678933;
-}
-
-input.lineInput {
-    width: 195px;
-    margin-top: 20px;
-    margin-right: 10px;
-    border-radius: 8px;
-    font-size: 24px;
-    padding: 6px 10px;
-    outline: none;
-    border: none;
-    background-color: #35678933;
 }
 
 a.navigationButton {
@@ -179,5 +103,155 @@ img.govBr {
   width: auto;
   vertical-align: middle;
 }
+/* vvv registerPage vvv*/
+
+div.registerBox {
+    position: relative;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+
+    background-color: #f0f0f0;
+    box-shadow: 3px 3px 5px #c0c0c0;
+    
+    justify-content: flex-start;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 8px;
+}
+
+div.registerBox h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 26px;
+}
+
+div.registerBox h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.registerBox .buttonstyle {
+    align-self: center;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.registerBox input.inputstyle {
+    margin-top: 3px;
+}
+
+.registerBox div.lineInput {
+    margin-top: 3px;
+}
+
+.registerBox input.lineInput {
+    margin-top: 3px;
+}
+
+.registerBox input.inputRegister {
+    margin-top: 3px;
+}
+
+div.lineInput {
+    position: relative;
+    right: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+div.lineInput[id="passwordDiv"] {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+div.lineInput[id="errorDiv"] {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+input.inputstyle {
+    position: relative;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #35678933;
+}
+
+input.inputstyle[id="birthdate"] {
+    width: 120px;
+}
+
+.flatpickr-current-month .numInputWrapper {
+  font-size: 24px;
+  width: 100px;
+}
+
+.flatpickr-current-month input.cur-year {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input.inputRegister {
+    width: 180px;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #35678933;
+}
+
+input.lineInput {
+    width: 195px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #35678933;
+}
+
+/* ^^^ registerPage ^^^ */
 
 /* ^^^ loginPage e registerPage ^^^ */
+
+/* vvv homePage vvv*/
+
+div.homeHeader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 70px;
+
+    background-color: #f0f0f0;
+    box-shadow: 3px 3px 5px #c0c0c0;
+    border-radius: 8px;
+}
+
+/* ^^^ homePage ^^^ */

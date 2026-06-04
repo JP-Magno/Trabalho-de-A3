@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder</title>
+    <title>Registro - Placeholder</title>
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -12,8 +12,7 @@
 
 <body>
     <main>
-        <header>
-            <div class="registerBox">
+        <div class="registerBox">
                 <h1 style="text-align: center; font-size: 26px;">Registrar-se</h1>
 
                 <h2>Digite seu CPF</h2>
@@ -30,8 +29,8 @@
 
                 <h2>Digite seu nome</h2>
                 <div class="lineInput">
-                    <input class="lineInput" type="text" placeholder="Nome"/>
-                    <input class="lineInput" type="text" placeholder="Sobrenome"/>
+                    <input class="lineInput" type="text" placeholder="Nome" id="name"/>
+                    <input class="lineInput" type="text" placeholder="Sobrenome" id="lastname"/>
                 </div>
                 
                 <h2>Insira sua data de nascimento</h2>
@@ -40,22 +39,43 @@
                     flatpickr("#birthdate", {
                         dateFormat: "d/m/Y",
                         locale: "pt",
-                        minDate: "1920-01-01",
-                        maxDate: "2026-12-31"
                     });
                 </script>
 
                 <h2>Crie sua senha</h2>
-                <div class="lineInput">
-                    <input class="lineInput" type="password" placeholder="Senha"/>
-                    <input class="lineInput" type="password" placeholder="Confirmar senha"/>
+                <div id="passwordDiv"class="lineInput">
+                    <input class="lineInput" type="password" placeholder="Senha" id="password"/>
+                    <input class="lineInput" type="password" placeholder="Confirmar senha" id="confirmPassword"/>
                 </div>
 
-                <button class="buttonstyle" type="submit" href="">Registrar-se</button>
+                <div id="errorDiv" class="lineInput">
+                    <p class="error-message" id="errorMessage">Por favor, preencha todos os campos.</p>
+                </div>
+                
+                <button class="buttonstyle" type="submit" id="registerBtn">Registrar-se</button>
 
-                <p style="text-align: center; width: 100%;">Já possuí uma conta? <a href="loginPage.html">Faça login aqui.</a></p>
-            </div>
-        </header>
+                <p style="text-align: center; width: 100%; margin-top: 0;">Já possuí uma conta? <a href="loginPage.html">Faça login aqui.</a></p>
+
+                <script>
+                    const registerBtn = document.getElementById("registerBtn");
+                    const errorMsg = document.getElementById("errorMessage");
+
+                    registerBtn.addEventListener("click", function() {
+                    const name = document.getElementById("name").value.trim();
+                    const lastname = document.getElementById("lastname").value.trim();
+                    const cpf = document.getElementById("cpf").value.trim();
+                    const birthdate = document.getElementById("birthdate").value.trim();
+                    const password = document.getElementById("password").value.trim();
+                    const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+                    if (name && lastname && cpf && birthdate && password && confirmPassword && password === confirmPassword) {
+                        window.location.href = "loginPage.html";
+                        } else {
+                        errorMsg.style.display = "block";
+                        }
+                    });
+                </script>
+        </div>
     </main>
 </body>
 
