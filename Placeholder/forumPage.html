@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGB / Brasil Mais Verde - Fórum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/forumStyle.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand" aria-label="Brasil Mais Verde">
+                <span class="brand-logo" aria-hidden="true">LOGO</span>
+            </div>
+
+            <nav class="nav" aria-label="Navegação principal">
+                <a class="nav-link is-active" href="#inicio" aria-current="page">Início</a>
+                <a class="nav-link" href="#solicitacoes">Solicitações</a>
+                <a class="nav-link" href="#forum">Fórum</a>
+                <a class="nav-link" href="#configuracao">Configuração</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Ações">
+                <button class="icon-btn" type="button" aria-label="Notificações">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2Z" fill="currentColor" />
+                        <path
+                            d="M18 16v-5c0-3.1-1.6-5.6-4.5-6.3V4a1.5 1.5 0 0 0-3 0v.7C7.6 5.4 6 7.9 6 11v5l-2 2v1h16v-1l-2-2Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Perfil">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5Z" fill="currentColor" />
+                        <path d="M0 22c0-5.5 4.5-10 12-10s12 4.5 12 10v2H0v-2Z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo" class="page-main">
+        <section class="hero" aria-label="Banner principal">
+            <div class="hero-content">imagem</div>
+        </section>
+
+        <section class="section" id="forum" aria-label="Fórum">
+            <div class="section-head">
+                <h2 class="section-title">Debates populares perto de você</h2>
+            </div>
+
+            <div class="cards-row" role="list" aria-label="Lista de debates populares">
+                <article class="card" role="listitem">
+                    <div class="card-body">
+                        <h3 class="card-title">Debate 1</h3>
+                        <p class="card-meta">Última atividade: hoje</p>
+                    </div>
+                </article>
+                <article class="card" role="listitem">
+                    <div class="card-body">
+                        <h3 class="card-title">Debate 2</h3>
+                        <p class="card-meta">Última atividade: ontem</p>
+                    </div>
+                </article>
+                <article class="card" role="listitem">
+                    <div class="card-body">
+                        <h3 class="card-title">Debate 3</h3>
+                        <p class="card-meta">Última atividade: 2 dias</p>
+                    </div>
+                </article>
+                <article class="card" role="listitem">
+                    <div class="card-body">
+                        <h3 class="card-title">Debate 4</h3>
+                        <p class="card-meta">Última atividade: esta semana</p>
+                    </div>
+                </article>
+                <article class="card" role="listitem">
+                    <div class="card-body">
+                        <h3 class="card-title">Debate 5</h3>
+                        <p class="card-meta">Última atividade: recente</p>
+                    </div>
+                </article>
+            </div>
+
+            <a class="see-more" href="#" aria-label="Ver mais debates">
+                Veja mais
+            </a>
+        </section>
+
+        <section class="section" id="mudancas" aria-label="Carrossel de mudanças">
+            <div class="section-head">
+                <h2 class="section-title">Mudanças através do Brasil Mais Verde</h2>
+            </div>
+
+            <div class="carousel" data-carousel>
+                <button class="carousel-arrow is-left" type="button" data-carousel-prev aria-label="Anterior">
+                    <span aria-hidden="true">
+                        << /span>
+                </button>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-media" aria-label="imagem do slide">
+                            <span class="carousel-media-text" data-carousel-text>imagem</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-arrow is-right" type="button" data-carousel-next aria-label="Próximo">
+                    <span aria-hidden="true">></span>
+                </button>
+
+                <div class="carousel-dots" role="tablist" aria-label="Paginação">
+                    <button class="dot is-active" type="button" data-carousel-dot="0" role="tab" aria-selected="true"
+                        aria-label="Slide 1"></button>
+                    <button class="dot" type="button" data-carousel-dot="1" role="tab" aria-selected="false"
+                        aria-label="Slide 2"></button>
+                    <button class="dot" type="button" data-carousel-dot="2" role="tab" aria-selected="false"
+                        aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="localizacao" aria-label="Localização presencial">
+            <div class="section-head">
+                <h2 class="section-title">Saiba onde nos encontrar presencialmente</h2>
+            </div>
+
+            <div class="map-block" role="img" aria-label="mapa">
+                <div class="map-text">mapa</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Rodapé">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-title">Brasil Mais Verde Tecnologia e Soluções LTDA</div>
+                <div class="social" aria-label="Redes sociais">
+                    <a class="social-link" href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2" />
+                            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a class="social-link" href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v6h3v-6h3l1-3h-4V9Z" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a class="social-link" href="#" aria-label="Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 5.8c-.8.4-1.7.7-2.6.8.9-.5 1.6-1.4 1.9-2.4-.9.5-1.8.9-2.8 1.1A4.6 4.6 0 0 0 11 8.7c0 .4 0 .8.1 1.1-3.8-.2-7.2-2-9.5-4.9-.4.7-.6 1.5-.6 2.4 0 1.6.8 3 2.1 3.8-.7 0-1.4-.2-2-.6v.1c0 2.3 1.6 4.2 3.8 4.6-.4.1-.9.2-1.4.2-.3 0-.6 0-.9-.1.6 2 2.5 3.5 4.7 3.5A9.3 9.3 0 0 1 2 19.7 13.2 13.2 0 0 0 9.1 22c8.4 0 13-7.2 13-13.4v-.6c.9-.7 1.6-1.4 2-2.2Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h3 class="footer-title">Links rápidos</h3>
+                    <a class="footer-link" href="#">Suporte</a>
+                    <a class="footer-link" href="#">Guia</a>
+                    <a class="footer-link" href="#">Cidades cadastradas</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Segurança</h3>
+                    <a class="footer-link" href="#">Termos e Condições</a>
+                    <a class="footer-link" href="#">Políticas de Privacidade</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Contato</h3>
+                    <a class="footer-link" href="#">E-mail: contato@brasilmaisverde.com</a>
+                    <a class="footer-link" href="#">Telefone: (21) 99999-9999</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Brasil Mais Verde - SGB</span>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
