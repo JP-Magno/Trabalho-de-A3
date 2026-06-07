@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>SGB • Solicitações</title>
+    <meta name="description"
+        content="Listagem de chamados do sistema SGB para Brasil Mais Verde Tecnologia e Soluções LTDA." />
+
+    <link rel="stylesheet" href="Styles/requestsStyle.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app" role="application" aria-label="SGB - Solicitações">
+        <header class="topbar" role="banner">
+            <div class="topbar__inner">
+                <a class="brand" href="#" aria-label="SGB - Brasil Mais Verde">
+                    <span class="brand__logo" aria-hidden="true">LOGO</span>
+                    <span class="brand__name">SGB</span>
+                </a>
+
+                <nav class="topnav" aria-label="Navegação principal">
+                    <a class="navlink" href="homePage.html" aria-current="page">Início</a>
+                    <a class="navlink navlink--active" href="#" aria-current="page">
+                        Solicitações
+                    </a>
+                    <a class="navlink" href="forumPage.html">Fórum</a>
+                    <a class="navlink" href="settingsPage.html">Configuração</a>
+                </nav>
+
+                <div class="topbar__actions" aria-label="Ações do usuário">
+                    <button class="iconbtn" type="button" aria-label="Notificações">
+                        <!-- sino (inline svg) -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path
+                                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2Zm6-6V11c0-3.07-1.64-5.64-4.5-6.32V4a1.5 1.5 0 0 0-3 0v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+
+                    <div class="avatar" role="img" aria-label="Avatar do usuário" title="Usuário">
+                        <span class="avatar__initials" aria-hidden="true">U</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main id="conteudo" class="main" tabindex="-1">
+            <section class="container" aria-label="Painel de solicitações">
+                <header class="container__header">
+                    <h1 class="container__title">Solicitações</h1>
+                    <p class="container__subtitle">Escolha uma aba para filtrar os chamados.</p>
+                </header>
+
+                <div class="tabs" role="tablist" aria-label="Filtrar por status">
+                    <button class="tab aba-ativa" type="button" role="tab" aria-selected="true" aria-controls="painel"
+                        id="tab-enviadas" data-status="enviadas" tabindex="0">Enviadas</button>
+                    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="painel"
+                        id="tab-discussao" data-status="discussao" tabindex="-1">Em discussão</button>
+                    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="painel"
+                        id="tab-concluidas" data-status="concluidas" tabindex="-1">Concluídas</button>
+                    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="painel"
+                        id="tab-canceladas" data-status="canceladas" tabindex="-1">Canceladas</button>
+                </div>
+
+                <div class="cards" id="painel" role="tabpanel" aria-labelledby="tab-enviadas">
+                    <ul class="cards__list" id="cardsList" aria-label="Lista de chamados" aria-live="polite">
+                        <!-- Cards renderizados via JS -->
+                    </ul>
+
+                    <p class="empty" id="emptyState" hidden>
+                        Nenhum chamado encontrado para este status.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer__inner">
+                <section class="footer__col" aria-label="Empresa e redes sociais">
+                    <h2 class="footer__brand">Brasil Mais Verde Tecnologia e Soluções LTDA</h2>
+                    <div class="social" aria-label="Redes sociais">
+                        <a class="social__link" href="#" aria-label="Facebook" title="Facebook"
+                            rel="noopener noreferrer">
+                            <span aria-hidden="true">F</span>
+                        </a>
+                        <a class="social__link" href="#" aria-label="LinkedIn" title="LinkedIn"
+                            rel="noopener noreferrer">
+                            <span aria-hidden="true">in</span>
+                        </a>
+                        <a class="social__link" href="#" aria-label="YouTube" title="YouTube" rel="noopener noreferrer">
+                            <span aria-hidden="true">▶</span>
+                        </a>
+                        <a class="social__link" href="#" aria-label="Instagram" title="Instagram"
+                            rel="noopener noreferrer">
+                            <span aria-hidden="true">⌁</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="footer__col" aria-label="Links rápidos">
+                    <h3 class="footer__title">Links Rápidos</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Guia</a></li>
+                        <li><a href="#">Cidades cadastradas</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer__col" aria-label="Segurança">
+                    <h3 class="footer__title">Segurança</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Termos e Condições</a></li>
+                        <li><a href="#">Políticas de Privacidade</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer__col" aria-label="Contato">
+                    <h3 class="footer__title">Contato</h3>
+                    <ul class="footer__list">
+                        <li><a href="mailto:contato@brasilmaisverde.com">E-mail</a></li>
+                        <li><a href="tel:+550000000000">Telefone</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="footer__bottom" aria-label="Informações legais">
+                <span>© <span id="year"></span> Brasil Mais Verde. Conteúdo fictício para protótipo.</span>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="script.js"></script>
+    <script>
+        (() => {'use strict';
+
+        const $ = (sel, root = document) => root.querySelector(sel);
+        const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+        const tabs = $$('.tab[data-status]');
+        const cardsList = $('#cardsList');
+        const emptyState = $('#emptyState');
+
+        const stateByStatus = {
+            enviadas: [],
+            discussao: [],
+            concluidas: [],
+            canceladas: [],
+        };
+
+        const mockData = [
+            {
+                status: 'enviadas',
+                local: 'Av. Brasil, Rio de Janeiro - RJ',
+                descricao: 'Solicitação de manutenção após buraco recente em faixa de pedestres.',
+                badges: ['#segurança', '#polícia', '#zonaoeste'],
+                dateText: 'Enviada em 5 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'enviadas',
+                local: 'Rua das Palmeiras, São Paulo - SP',
+                descricao: 'Problema de iluminação que reduz visibilidade no período noturno para moradores.',
+                badges: ['#iluminação', '#moradores'],
+                dateText: 'Enviada em 12 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'discussao',
+                local: 'Av. Atlântica, Fortaleza - CE',
+                descricao: 'Discussão sobre drenagem e acúmulo de água em dias de chuva intensa no entorno.',
+                badges: ['#saneamento', '#mobilidade'],
+                dateText: 'Atualizada em 16 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'discussao',
+                local: 'Rua do Comércio, Recife - PE',
+                descricao: 'Em discussão: necessidade de fiscalização e rotina de manutenção para evitar reincidência.',
+                badges: ['#polícia', '#fiscalização'],
+                dateText: 'Atualizada em 18 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'concluidas',
+                local: 'Estrada do Sol, Brasília - DF',
+                descricao: 'Chamado concluído com reparo realizado e verificação de segurança no local informado.',
+                badges: ['#segurança', '#zonaoeste'],
+                dateText: 'Concluída em 20 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'concluidas',
+                local: 'Rua Aurora, Curitiba - PR',
+                descricao: 'Serviço finalizado após ajustes de acessibilidade e correção de pontos irregulares.',
+                badges: ['#acessibilidade', '#infra'],
+                dateText: 'Concluída em 22 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+            {
+                status: 'canceladas',
+                local: 'Alameda Central, Salvador - BA',
+                descricao: 'Cancelada por duplicidade do registro; orientado reenviar com informações complementares.',
+                badges: ['#correção', '#cadastro'],
+                dateText: 'Cancelada em 23 de maio de 2026',
+                detailsText: 'mais detalhes...'
+            },
+        ];
+
+        function seed() {
+            for (const item of mockData) {
+                if (!stateByStatus[item.status]) continue;
+                stateByStatus[item.status].push(item);
+            }
+        }
+
+        function setActiveTab(status) {
+            tabs.forEach((tab) => {
+                const isActive = tab.dataset.status === status;
+                tab.classList.toggle('aba-ativa', isActive);
+                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                tab.tabIndex = isActive ? 0 : -1;
+            });
+        }
+
+        function formatDesc(desc) {
+            const text = (desc ?? '').trim();
+            // garante requisito mínimo de 20 chars no mock (mesmo assim corta para layout)
+            return text.length > 130 ? `${text.slice(0, 127)}…` : text;
+        }
+
+        function renderCards(status) {
+            const items = stateByStatus[status] ?? [];
+            cardsList.innerHTML = '';
+
+            if (items.length === 0) {
+                emptyState.hidden = false;
+                return;
+            }
+
+            emptyState.hidden = true;
+
+            // cards
+            for (const item of items) {
+                const li = document.createElement('li');
+                li.className = 'cardcall';
+                li.setAttribute('role', 'article');
+                li.innerHTML = `
+            <div class="cardcall__grid">
+            <div class="cardcall__left">
+                <h3 class="cardcall__loc">${escapeHtml(item.local)}</h3>
+                <p class="cardcall__desc">${escapeHtml(formatDesc(item.descricao))}</p>
+                <div class="cardcall__badges" aria-label="Tags do chamado">
+                ${item.badges.map((b) => `<span class="cardcall__badge">${escapeHtml(b)}</span>`).join('')}
+                </div>
+                <div class="cardcall__meta">
+                <span>${escapeHtml(item.dateText)} • ${escapeHtml(item.detailsText)}</span>
+                </div>
+            </div>
+
+            <div class="cardcall__right" aria-label="Mídias anexadas">
+                <div class="media" aria-hidden="true"></div>
+                <div class="media" aria-hidden="true"></div>
+                <div class="media" aria-hidden="true"></div>
+                <div class="media" aria-hidden="true"></div>
+            </div>
+            </div>
+        `;
+
+                cardsList.appendChild(li);
+            }
+        }
+
+        // Abas: clique e teclado (Enter/Space já funcionam em button; mantemos para consistência)
+        function onTabActivate(tab) {
+            const status = tab.dataset.status;
+            if (!status) return;
+            setActiveTab(status);
+            renderCards(status);
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => onTabActivate(tab));
+            tab.addEventListener('keydown', (e) => {
+                if (e.key !== 'Enter' && e.key !== ' ') return;
+                e.preventDefault();
+                onTabActivate(tab);
+            });
+        });
+
+        // Atalho: setas entre abas
+        document.addEventListener('keydown', (e) => {
+            const active = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
+            if (!active) return;
+
+            // se foco estiver nas tabs, aplica navegação por setas
+            if (!tabs.includes(document.activeElement)) return;
+
+            const idx = tabs.indexOf(active);
+
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const dir = e.key === 'ArrowRight' ? 1 : -1;
+                const nextIdx = (idx + dir + tabs.length) % tabs.length;
+                tabs[nextIdx].focus();
+                onTabActivate(tabs[nextIdx]);
+            }
+        });
+
+        function escapeHtml(str) {
+            return String(str)
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '<')
+                .replaceAll('>', '>')
+                .replaceAll('"', '"')
+                .replaceAll("'", '&#039;');
+        }
+
+        // Init
+        seed();
+        setActiveTab('enviadas');
+        renderCards('enviadas');
+
+        // ano no footer
+        const year = $('#year');
+        if (year) year.textContent = String(new Date().getFullYear());
+    })();
+    </script>
+</body>
+
+</html>

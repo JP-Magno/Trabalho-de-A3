@@ -21,8 +21,8 @@
             </div>
 
             <nav class="nav" aria-label="Navegação principal">
-                <a class="nav-link is-active" href="#inicio" aria-current="page">Início</a>
-                <a class="nav-link" href="#solicitacoes">Solicitações</a>
+                <a class="nav-link is-active" href="homePage.html" aria-current="page">Início</a>
+                <a class="nav-link" href="requestsPage.html">Solicitações</a>
                 <a class="nav-link" href="#forum">Fórum</a>
                 <a class="nav-link" href="#configuracao">Configuração</a>
             </nav>
@@ -200,6 +200,62 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        (function () {
+        const carousel = document.querySelector('[data-carousel]');
+        if (!carousel) return;
+
+        const prevBtn = carousel.querySelector('[data-carousel-prev]');
+        const nextBtn = carousel.querySelector('[data-carousel-next]');
+        const slideEl = carousel.querySelector('[data-carousel-slide]');
+        const textEl = carousel.querySelector('[data-carousel-text]');
+        const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+
+        const slides = [
+            { text: 'imagem', bg: '#0b2a4a' },
+            { text: 'imagem', bg: '#0f3a66' },
+            { text: 'imagem', bg: '#06213a' }
+        ];
+
+        let index = 0;
+
+        function setActiveDot(i) {
+            dots.forEach((d, di) => {
+                const isActive = di === i;
+                d.classList.toggle('is-active', isActive);
+                d.setAttribute('aria-selected', String(isActive));
+            });
+        }
+
+        function render() {
+            const s = slides[index];
+            if (slideEl) slideEl.style.background = s.bg;
+            if (textEl) textEl.textContent = s.text;
+            setActiveDot(index);
+        }
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            render();
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const i = Number(dot.getAttribute('data-carousel-dot'));
+                if (Number.isFinite(i)) goTo(i);
+            });
+        });
+
+        render();
+
+        // Footer year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    })();
+    </script>
 </body>
 
 </html>
