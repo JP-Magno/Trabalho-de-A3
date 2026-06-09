@@ -148,6 +148,10 @@ div.registerBox h2 {
     margin-top: 3px;
 }
 
+.registerBox input.inputstyle[id="email"] {
+    width: 220px;
+}
+
 .registerBox div.lineInput {
     margin-top: 3px;
 }
@@ -234,6 +238,18 @@ input.lineInput {
     outline: none;
     border: none;
     background-color: #35678933;
+}
+
+div.lineInput input.inputstyle[id="orgao"] {
+    width: 90px;
+}
+
+div.lineInput input.inputstyle[id="matricula"] {
+    width: 100px;
+}
+
+div.lineInput input.inputstyle[id="areaDeAtuacao"] {
+    width: 180px;
 }
 
 /* ^^^ registerPage ^^^ */

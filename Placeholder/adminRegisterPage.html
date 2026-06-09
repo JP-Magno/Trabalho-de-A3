@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Placeholder</title>
+    <title>Registro Gestor - Placeholder</title>
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -14,6 +14,7 @@
     <main>
         <div class="registerBox">
                 <h1 style="text-align: center; font-size: 26px;">Registrar-se</h1>
+
                 <h2>Digite seu CPF e E-mail</h2>
                 <div class="lineInput">
                     <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" class="inputRegister"/>
@@ -28,8 +29,6 @@
                     </script>
                     <input class="inputstyle" type="email" id="email" placeholder="E-mail"/>
                 </div>
-                
-                
 
                 <h2>Digite seu nome</h2>
                 <div class="lineInput">
@@ -37,14 +36,12 @@
                     <input class="lineInput" type="text" placeholder="Sobrenome" id="lastname"/>
                 </div>
                 
-                <h2>Insira sua data de nascimento</h2>
-                <input id="birthdate" class="inputstyle" type="text" placeholder="dd/mm/aaaa"/>
-                <script>
-                    flatpickr("#birthdate", {
-                        dateFormat: "d/m/Y",
-                        locale: "pt",
-                    });
-                </script>
+                <h2>Informações institucionais</h2>
+                <div class="lineInput">
+                    <input class="inputstyle" placeholder="Órgão" id="orgao"/>
+                    <input class="inputstyle" placeholder="Matrícula" id="matricula"/>
+                    <input class="inputstyle" placeholder="Área de Atuação" id="areaDeAtuacao"/>
+                </div>
 
                 <h2>Crie sua senha</h2>
                 <div id="passwordDiv"class="lineInput">
@@ -69,11 +66,13 @@
                     const lastname = document.getElementById("lastname").value.trim();
                     const cpf = document.getElementById("cpf").value.trim();
                     const email = document.getElementById("email").value.trim();
-                    const birthdate = document.getElementById("birthdate").value.trim();
+                    const orgao = document.getElementById("orgao").value.trim();
+                    const matricula = document.getElementById("matricula").value.trim();
+                    const ada = document.getElementById("areaDeAtuacao").value.trim();
                     const password = document.getElementById("password").value.trim();
                     const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
-                    if (name && lastname && cpf && email && birthdate && password && confirmPassword && password === confirmPassword) {
+                    if (name && lastname && cpf && email && orgao && matricula && ada && password && confirmPassword && password === confirmPassword) {
                         window.location.href = "loginPage.html";
                         } else {
                         errorMsg.style.display = "block";
