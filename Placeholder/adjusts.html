@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Placeholder</title>
-    <link rel="stylesheet" href="Styles/homeStyle.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -21,28 +13,7 @@
             }
         }
     </script>
-</head>
 
-<body>
-    <!--header>
-        <div class="headerStyle">
-            <div class="logoStyle">
-                <div class="iconPlaceholder"></div>
-            </div>
-            <div class="lineMenu">
-                <a class="menuItem" href="homePage.html">Início</a>
-                <a class="menuItem" href="requestsPage.html">Solicitações</a>
-                <a class="menuItem" href="forumPage.html">Fórum</a>
-                <a class="menuItem" href="settingsPage.html">Configurações</a>
-            </div>
-            <div class="profileIcon">
-                <div class="iconPlaceholder"></div>
-            </div>
-            <div class="notifications">
-                <div class="iconPlaceholder"></div>
-            </div>
-        </div>
-    </header-->
     <header class="w-full bg-white rounded-b-[20px] shadow-sm">
         <div class="max-w-[1440px] mx-auto px-6 md:px-16 h-[100px] md:h-[164px] flex items-center justify-between relative">
             <a href="#" class="font-nunito font-bold text-2xl text-black shrink-0">LOGO</a>
@@ -81,7 +52,7 @@
             </div>
         </div>
     </header>
-        
+
 
     <main>
         <div class="welcomeMessage">
@@ -93,7 +64,7 @@
 
             <div class="carouselMenu">
 
-                <button class="previous" style="margin-top: 30px; margin-left: 10px;"><img src="Images/arrow.png"/></button>
+                <button class="previous"><</button>
 
                 <div class="carouselItem">
                     <img src="Images/RASCUNHO.png"/>
@@ -120,92 +91,47 @@
                     <h3>Debate 5</h3>
                 </div>
 
-                <button class="next" id="prev" style="margin-top: 30px; margin-right: 10px;"><img src="Images/arrow.png"/></button>
+                <button class="next">></button>
 
             </div>
-            <a style="position: relative; margin-left: 88%;" href="forumPage.html">Veja mais...</a>
+            <a syle="" href="forumPage.html">Veja mais...</a>
 
             <div class="brasilMaisVerde">
                 <h2>Mudanças através do Brasil Mais Verde</h2>
                 
                 <div class="singleCarouselMenu">
 
-                    <button class="previous" style="margin-top: 125px;"><img src="Images/arrow.png"/></button>
+                    <button class="previous"><</button>
 
                     <div class="singleCarouselItem">
                         <img src="Images/RASCUNHO.png"/>
                         <h3>AOAOAOAOAOAO</h3>
                     </div>
 
-                    <button class="next" id="next" style="margin-top: 125px;"><img src="Images/arrow.png"/></button>
+                    <button class="next">></button>
 
                 </div>
 
                 <div class="carouselIndicator">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="dotActive">O</span>
+                    <span class="dot">o</span>
+                    <span class="dot">o</span>
+                    <span class="dot">o</span>
+                    <span class="dot">o</span>
+                    <span class="dot">o</span>
                 </div>
-
-                <script>
-                    const dots = document.querySelectorAll('.dot');
-                    let activeIndex = 0;
-
-                    function updateActiveDot(newIndex) {
-                        dots[activeIndex].classList.remove('active');
-                        activeIndex = newIndex;
-                        dots[activeIndex].classList.add('active');
-                    }
-
-                    document.getElementById('next').addEventListener('click', () => {
-                        let newIndex = activeIndex + 1;
-                        if (newIndex >= dots.length) newIndex = 0;
-                        updateActiveDot(newIndex);
-                    });
-
-                    document.getElementById('prev').addEventListener('click', () => {
-                        let newIndex = activeIndex - 1;
-                        if (newIndex < 0) newIndex = dots.length - 1;
-                        updateActiveDot(newIndex);
-                    });
-                </script>
 
             </div>
 
-            <h2>Saiba onde nos encontrar</h2>
             <div class="whereToFindUs">
 
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.3944935306085!2d-43.33521625526072!3d-23.00160128095426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda3fddfcfad7%3A0x5a82fa8b1b14ae6b!2sCentro%20Universit%C3%A1rio%20IBMR%20Barra!5e1!3m2!1spt-BR!2sbr!4v1780784246867!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2>Saiba onde nos encontrar</h2>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.3944935306085!2d-43.33521625526072!3d-23.00160128095426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda3fddfcfad7%3A0x5a82fa8b1b14ae6b!2sCentro%20Universit%C3%A1rio%20IBMR%20Barra!5e1!3m2!1spt-BR!2sbr!4v1780784246867!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </main>
-    <!--footer>
-        <div class="socialMedia">
-            <h2>SBG - Soluções Básicas Governamentais</h2>
-            <a href="#"><img src="Images/facebook.png" alt="Facebook"/></a>
-            <a href="#"><img src="Images/linkedin.png" alt="LinkedIn"/></a>
-            <a href="#"><img src="Images/youtube.png" alt="YouTube"/></a>
-            <a href="#"><img src="Images/instagram.png" alt="Instagram"/></a>
-        </div>
-        <div class="fastLinks">
-            <h3>Links Rápidos</h3>
-            <a href="supportPage.html">Suporte</a>
-            <a href="idkPage.html">Guia</a>
-            <a href="citiesPage.html">Cidades cadastradas</a>
-        </div>
-        <div class="security">
-            <a href="tosPage.html">Termos e Condições</a>
-            <a href="privacyPage.html">Política de Privacidade</a>
-        </div>
-        <div class="contactInfo">
-            <h3>Contato</h3>
-            <p>sac@sbg.com.br</p>
-            <p>(21) 99999-9999</p>
-        </div>
-    </footer-->
+
     <footer class="w-full bg-white mt-auto">
         <div class="max-w-[1440px] mx-auto px-6 md:px-20 pt-1">
             <div class="border-t border-[#E6E6E6]"></div>
@@ -256,6 +182,3 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
