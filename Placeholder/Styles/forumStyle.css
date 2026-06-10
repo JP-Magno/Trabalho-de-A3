@@ -1,0 +1,25 @@
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+:where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Base customizada dos Cards informada nas referências */
+.custom-card {
+    width: 472px;
+    height: 586px;
+    border-radius: 10px;
+    background-color: rgba(235, 235, 235, 0.25);
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}

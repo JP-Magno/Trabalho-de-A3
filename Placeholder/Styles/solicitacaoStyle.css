@@ -1,0 +1,45 @@
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --card: 0 0% 95%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --primary: 30 51% 26%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 85%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 30 51% 26%;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Nunito', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+:where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-family: 'Nunito', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+pre,
+code {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Modificador de Fundo do contentor porque no HTML puro não há "bg-white/25" da mesma forma sem a configuração avançada de theme rgba */
+.bg-white-transparent {
+    background-color: rgba(255, 255, 255, 0.25);
+}

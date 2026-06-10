@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações - SGB</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Styles/solicitacaoStyle.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nunito: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brown: '#8B4513', // Cor aproximada para o "brown" usado no hover/active
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col bg-white font-nunito">
+
+    <header class="w-full bg-white rounded-b-[20px] shadow-sm">
+        <div class="flex items-center justify-between px-6 lg:px-10 h-20 lg:h-24">
+            <a href="#" class="font-nunito font-bold text-2xl text-black shrink-0">
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/cac0ef03f4f20ef142544348ac4bd2b00546d956?width=678" alt="Logo SGB" class="h-16 lg:h-20 w-auto object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                <a href="homePage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                    <span class="inline-block transition-transform duration-200 group-hover:scale-110">Inicio</span>
+                </a>
+                <a href="solicitacaoPage.html" class="group relative font-nunito font-semibold text-black text-[22px] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-[70%] after:h-[6px] after:bg-brown after:rounded-full">
+                    <span class="inline-block transition-transform duration-200 group-hover:scale-110">Solicitações</span>
+                </a>
+                <a href="forumPage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                    <span class="inline-block transition-transform duration-200 group-hover:scale-110">Fórum</span>
+                </a>
+                <a href="configPage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                    <span class="inline-block transition-transform duration-200 group-hover:scale-110">Configuração</span>
+                </a>
+            </nav>            
+
+            <div class="flex items-center gap-4">
+                <button class="text-black/45 hover:text-black/70 transition-colors" aria-label="Notificações">
+                    <svg width="40" height="40" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2822 12.8031V14.2281C17.9973 17.2154 12.9077 27.0275 13.0924 35.5312L13.0924 40.2543C9.3631 45.0486 9.58253 52.197 18.8866 52.197H25.2822C25.2822 54.1559 26.0456 56.0347 27.4046 57.42C28.7633 58.8053 30.6064 59.5834 32.5282 59.5834C34.45 59.5834 36.2931 58.8053 37.6518 57.42C39.0109 56.0347 39.7741 54.1559 39.7741 52.197H46.1874C55.4737 52.197 55.6083 45.0337 51.8795 40.2394L51.9832 35.5378C52.1709 27.0241 47.0717 17.2033 39.7741 14.2202V12.8031C39.7741 10.8441 39.0109 8.96537 37.6518 7.58016C36.2931 6.19496 34.45 5.41675 32.5282 5.41675C30.6064 5.41675 28.7633 6.19496 27.4046 7.58016C26.0456 8.96537 25.2822 10.8441 25.2822 12.8031ZM34.9435 12.8031C34.9435 12.8531 34.9421 12.903 34.9392 12.9526C34.1524 12.8539 33.351 12.8031 32.538 12.8031C31.7181 12.8031 30.9102 12.8548 30.1175 12.955C30.1145 12.9046 30.1129 12.8539 30.1129 12.8031C30.1129 12.1501 30.3675 11.5239 30.8203 11.0621C31.2732 10.6004 31.8877 10.341 32.5282 10.341C33.1687 10.341 33.7832 10.6004 34.2361 11.0621C34.6892 11.5239 34.9435 12.1501 34.9435 12.8031ZM30.1129 52.197C30.1129 52.85 30.3675 53.4764 30.8203 53.9382C31.2732 54.3997 31.8877 54.6591 32.5282 54.6591C33.1687 54.6591 33.7832 54.3997 34.2361 53.9382C34.6892 53.4764 34.9435 52.85 34.9435 52.197H30.1129ZM46.1874 47.2727C48.2509 47.2727 49.364 44.8054 48.0212 43.2083C47.3688 42.4324 47.021 41.4452 47.0435 40.4317L47.1537 35.4272C47.3382 27.0676 40.7407 17.7273 32.538 17.7273C24.3371 17.7273 17.7404 27.0645 17.9219 35.4221L18.0307 40.4325C18.0527 41.4457 17.7051 42.4326 17.0528 43.2083C15.7098 44.8054 16.8231 47.2727 18.8866 47.2727H46.1874Z" fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="text-black/45 hover:text-black/70 transition-colors" aria-label="Perfil">
+                    <svg width="44" height="44" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M37 18.5C30.1886 18.5 24.6667 24.0218 24.6667 30.8333C24.6667 37.6447 30.1886 43.1667 37 43.1667C43.8117 43.1667 49.3334 37.6447 49.3334 30.8333C49.3334 24.0218 43.8117 18.5 37 18.5ZM30.8334 30.8333C30.8334 27.4276 33.5942 24.6667 37 24.6667C40.4059 24.6667 43.1667 27.4276 43.1667 30.8333C43.1667 34.2392 40.4059 37 37 37C33.5942 37 30.8334 34.2392 30.8334 30.8333Z" fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M59.5949 57.9803C53.9645 64.0412 45.925 67.8334 37 67.8334C19.9712 67.8334 6.16663 54.0287 6.16663 37.0001C6.16663 19.9713 19.9712 6.16675 37 6.16675C54.0286 6.16675 67.8333 19.9713 67.8333 37.0001C67.8333 44.9045 64.8588 52.1143 59.9683 57.5712C59.9936 57.6717 60.0183 57.7728 60.0423 57.8746L59.5949 57.9803ZM12.3333 37.0001C12.3333 23.3771 23.3769 12.3334 37 12.3334C50.6231 12.3334 61.6666 23.3771 61.6666 37.0001C61.6666 42.3996 59.9316 47.3937 56.9892 51.4557C56.9759 51.4403 56.963 51.4248 56.9497 51.4094C55.4682 49.6704 53.6487 48.5179 51.6572 47.7615C47.8554 46.3173 43.1608 46.2501 38.5416 46.2501H35.4583C30.8817 46.2501 26.4754 46.305 22.985 47.8136C20.7273 48.7892 18.9888 50.2883 17.6907 52.3508C14.3372 48.138 12.3333 42.8032 12.3333 37.0001ZM22.2954 56.8065C26.4015 59.8599 31.4897 61.6667 37 61.6667C42.9705 61.6667 48.4456 59.5454 52.7126 56.0156C52.5646 55.7933 52.412 55.592 52.256 55.4088C51.5539 54.5849 50.6557 53.9775 49.4677 53.5261C46.911 52.5552 43.3994 52.4167 38.5416 52.4167H35.4583C30.5581 52.4167 27.5292 52.5675 25.4316 53.474C24.2069 54.0034 23.1316 54.8735 22.2954 56.8065Z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 py-8 sm:py-10">
+            <div class="w-full rounded-[10px] bg-white shadow-[4px_4px_20px_rgba(0,0,0,0.25)] overflow-hidden pb-5">
+                
+                <div id="tabs-container" class="px-4 sm:px-8 pt-10 pb-0 flex flex-wrap gap-4 sm:gap-6 items-center justify-center">
+                    </div>
+
+                <div id="requests-container" class="px-4 sm:px-8 lg:px-14 py-8 flex flex-col gap-6 sm:gap-8">
+                    </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bg-white mt-auto">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20 pt-1">
+            <div class="border-t border-[#E6E6E6]"></div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col gap-8">
+                    <p class="font-nunito font-bold text-2xl text-black leading-tight">SGB - Soluções Básicas Governamentais</p>
+                    <div class="flex items-center gap-5">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-[#51311A] hover:scale-110 transition-transform duration-200" aria-label="Facebook">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.04004C6.5 2.04004 2 6.53004 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85004C10.44 7.34004 11.93 5.96004 14.22 5.96004C15.31 5.96004 16.45 6.15004 16.45 6.15004V8.62004H15.19C13.95 8.62004 13.56 9.39004 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5879 18.0622 20.3856 19.6099 18.5701C21.1576 16.7546 22.0054 14.4457 22 12.06C22 6.53004 17.5 2.04004 12 2.04004Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-[#51311A] hover:scale-110 transition-transform duration-200" aria-label="LinkedIn">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="text-[#51311A] hover:scale-110 transition-transform duration-200" aria-label="YouTube">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 15L15.19 12L10 9V15ZM21.56 7.17C21.69 7.64 21.78 8.27 21.84 9.07C21.91 9.87 21.94 10.56 21.94 11.16L22 12C22 14.19 21.84 15.8 21.56 16.83C21.31 17.73 20.73 18.31 19.83 18.56C19.36 18.69 18.5 18.78 17.18 18.84C15.88 18.91 14.69 18.94 13.59 18.94L12 19C7.81 19 5.2 18.84 4.17 18.56C3.27 18.31 2.69 17.73 2.44 16.83C2.31 16.36 2.22 15.73 2.16 14.93C2.09 14.13 2.06 13.44 2.06 12.84L2 12C2 9.81 2.16 8.2 2.44 7.17C2.69 6.27 3.27 5.69 4.17 5.44C4.64 5.31 5.5 5.22 6.82 5.16C8.12 5.09 9.31 5.06 10.41 5.06L12 5C16.19 5 18.8 5.16 19.83 5.44C20.73 5.69 21.31 6.27 21.56 7.17Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-[#51311A] hover:scale-110 transition-transform duration-200" aria-label="Instagram">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <h3 class="font-nunito font-semibold text-[20px] text-black">Links rápidos</h3>
+                    <a href="#" class="font-nunito font-medium text-[16px] text-[#454545] hover:text-brown transition-colors">Suporte</a>
+                    <a href="#" class="font-nunito font-medium text-[16px] text-[#454545] hover:text-brown transition-colors">Guia</a>
+                    <a href="#" class="font-nunito font-medium text-[16px] text-[#454545] hover:text-brown transition-colors">Cidades cadastradas</a>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <h3 class="font-nunito font-semibold text-[20px] text-black">Segurança</h3>
+                    <a href="#" class="font-nunito font-medium text-[16px] text-[#454545] hover:text-brown transition-colors">Termos e Condições</a>
+                    <a href="#" class="font-nunito font-medium text-[16px] text-[#454545] hover:text-brown transition-colors">Políticas de Privacidade</a>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <h3 class="font-nunito font-semibold text-[20px] text-black">Contato</h3>
+                    <p class="font-nunito font-medium text-[16px] text-[#454545]">sac@sbg.com</p>
+                    <p class="font-nunito font-medium text-[16px] text-[#454545]">(21) 9999-9999</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Constantes baseadas no estado do React
+        const tabs = ["Enviadas", "Em discussão", "Concluídas", "Canceladas"];
+
+        // Estado da Aplicação
+        let activeTab = 0;
+
+        // Elementos do DOM
+        const tabsContainer = document.getElementById('tabs-container');
+        const requestsContainer = document.getElementById('requests-container');
+
+        /* Adicionámos o 'tabId' a cada objeto para saber em qual categoria ele deve aparecer:
+        0 = Enviadas
+        1 = Em discussão
+        2 = Concluídas
+        3 = Canceladas
+        */
+        const requests = [
+        // ------------------ ENVIADAS (tabId: 0) ------------------
+        {
+            id: 1,
+            location: "Av. Brasil, Rio de Janeiro - RJ",
+            description: "Solicito por meio deste canal que o local mencionado tenha mais policiamento e vistoria em horários específicos, trazendo mais segurança e tranquilidade para os moradores aos arredores.",
+            date: "Enviada em 5 de maio de 2026",
+            hashtags: ["#segurança", "#policia", "#zonaoeste"],
+            tabId: 0
+        },
+        {
+            id: 2,
+            location: "Rua do Catete, Rio de Janeiro - RJ",
+            description: "Buraco na via causando acidentes e trânsito lento durante horários de pico.",
+            date: "Enviada em 6 de maio de 2026",
+            hashtags: ["#infraestrutura", "#buraco", "#transito"],
+            tabId: 0
+        },
+
+        // ------------------ EM DISCUSSÃO (tabId: 1) ------------------
+        {
+            id: 3,
+            location: "Praça Saens Peña, Tijuca - RJ",
+            description: "Ouvidoria para debater a implementação de nova iluminação pública e revitalização dos canteiros.",
+            date: "Em discussão desde 10 de abril de 2026",
+            hashtags: ["#iluminação", "#revitalização", "#tijuca"],
+            tabId: 1
+        },
+        {
+            id: 4,
+            location: "Av. das Américas, Barra da Tijuca - RJ",
+            description: "Debate sobre a alteração do limite de velocidade e instalação de novos radares no trecho.",
+            date: "Em discussão desde 2 de maio de 2026",
+            hashtags: ["#transito", "#segurança-viaria"],
+            tabId: 1
+        },
+
+        // ------------------ CONCLUÍDAS (tabId: 2) ------------------
+        {
+            id: 5,
+            location: "Parque Madureira, Rio de Janeiro - RJ",
+            description: "Reforma dos brinquedos do parquinho infantil e instalação de novas lixeiras para coleta seletiva.",
+            date: "Concluída em 1 de abril de 2026",
+            hashtags: ["#lazer", "#limpeza", "#meio-ambiente"],
+            tabId: 2
+        },
+
+        // ------------------ CANCELADAS (tabId: 3) ------------------
+        {
+            id: 6,
+            location: "Linha Amarela, Rio de Janeiro - RJ",
+            description: "Solicitação de construção de passarela provisória. Cancelada devido ao início das obras do viaduto principal.",
+            date: "Cancelada em 15 de março de 2026",
+            hashtags: ["#infraestrutura", "#obras"],
+            tabId: 3
+        }
+        ];
+
+
+        // Renderiza os separadores (Tabs)
+        function renderTabs() {
+            tabsContainer.innerHTML = '';
+            
+            tabs.forEach((tab, index) => {
+                const button = document.createElement('button');
+                const isActive = activeTab === index;
+                
+                button.className = `relative font-nunito font-bold text-xl sm:text-2xl lg:text-[28px] transition-colors rounded-[32px] py-2 px-5 shadow-none ${
+                    isActive
+                    ? "text-white bg-brown shadow-[4px_4px_18px_rgba(0,0,0,0.25)]"
+                    : "text-black hover:text-brown bg-transparent"
+                }`;
+                
+                button.innerText = tab;
+                
+                // Adiciona evento de clique para mudar o estado
+                button.addEventListener('click', () => {
+                    activeTab = index; // Atualiza a aba ativa
+                    renderTabs();      // Atualiza o visual das abas
+                    renderRequests();  // Atualiza a lista de cards
+                });
+                
+                tabsContainer.appendChild(button);
+            });
+        }
+
+        // Renderiza a grelha de cartões
+        function renderRequests() {
+            requestsContainer.innerHTML = '';
+            
+            // Filtra as solicitações para mostrar apenas as que pertencem à aba selecionada
+            const filteredRequests = requests.filter(req => req.tabId === activeTab);
+            
+            // Verifica se existem solicitações para esta aba
+            if (filteredRequests.length > 0) {
+                filteredRequests.forEach(req => {
+                    // Gera as hashtags em HTML
+                    const hashtagsHTML = req.hashtags.map(tag => 
+                        `<span class="px-3 py-1 rounded-full bg-[#D9D9D9] font-nunito font-semibold text-sm text-black">${tag}</span>`
+                    ).join('');
+
+                    // Constrói o template de cartão HTML
+                    const cardHTML = `
+                        <div class="w-full rounded-[15px] bg-[#F2F2F2] shadow-[4px_4px_15px_rgba(0,0,0,0.25)] p-4 sm:p-6 flex flex-col gap-3">
+                        <div class="flex flex-col lg:flex-row gap-4">
+                            <div class="flex-1 flex flex-col gap-2">
+                            <h3 class="font-nunito font-bold text-xl sm:text-2xl text-black">
+                                ${req.location}
+                            </h3>
+                            <p class="font-nunito font-semibold text-base sm:text-[20px] text-black/80 leading-[150%]">
+                                ${req.description}
+                            </p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2 shrink-0 lg:w-[340px]">
+                            <div class="w-full aspect-[160/84] rounded-lg bg-[#D9D9D9]"></div>
+                            <div class="w-full aspect-[160/84] rounded-lg bg-[#D9D9D9]"></div>
+                            <div class="w-full aspect-[160/84] rounded-lg bg-[#D9D9D9]"></div>
+                            <div class="w-full aspect-[160/84] rounded-lg bg-[#D9D9D9]"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mt-1">
+                            <div class="flex flex-wrap gap-2">
+                            ${hashtagsHTML}
+                            </div>
+
+                            <div class="flex items-center gap-2 shrink-0">
+                            <span class="font-nunito font-semibold text-sm text-black/40">${req.date}</span>
+                            <span class="w-[5px] h-[5px] rounded-full bg-black/40 shrink-0"></span>
+                            <a href="/solicitacoes/${req.id}" class="font-nunito font-medium text-sm text-black/50 italic hover:text-brown transition-colors">
+                                mais detalhes..
+                            </a>
+                            </div>
+                        </div>
+                        </div>
+                    `;
+                    requestsContainer.insertAdjacentHTML('beforeend', cardHTML);
+                });
+            } else {
+                // Se a lista filtrada estiver vazia (não houver cards para esta categoria), mostra esta mensagem:
+                requestsContainer.innerHTML = `
+                    <div class="text-center py-16 text-black/40 font-nunito font-semibold text-lg">
+                        Nenhuma solicitação encontrada nesta categoria.
+                    </div>
+                `;
+            }
+        }
+
+        // Inicializa a página assim que o DOM carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTabs();
+            renderRequests();
+        });
+    </script>
+</body>
+</html>

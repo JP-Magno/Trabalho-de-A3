@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Configurações - SGB</title>
+  
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+        <script src="https://cdn.tailwindcss.com"></script>
+  
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'sgb-green': 'hsl(130, 44%, 52%)',
+                            'sgb-red': 'hsl(2, 67%, 60%)',
+                            'sgb-success': 'hsl(116, 54%, 42%)',
+                            'sgb-brown': 'hsl(24, 68%, 23%)',
+                            'sgb-muted': 'hsl(20, 20%, 81%)',
+                            brown: '#8B4513',
+                        },
+                        fontFamily: {
+                            sans: ['Nunito', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <link rel="stylesheet" href="Styles/configStyle.css">
+    </head>
+    <body class="bg-white font-sans flex flex-col min-h-screen">
+
+        <header class="w-full bg-white shadow-sm rounded-b-[20px] sticky top-0 z-50">
+            <div class="flex items-center justify-between px-6 lg:px-10 h-20 lg:h-24">
+                <a href="#" class="flex-shrink-0">
+                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/cac0ef03f4f20ef142544348ac4bd2b00546d956?width=678" alt="Logo SGB" class="h-16 lg:h-20 w-auto object-contain"/>
+                </a>
+                <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                    <a href="homePage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                        <span class="inline-block transition-transform duration-200 group-hover:scale-110">Inicio</span>
+                    </a>
+                    <a href="solicitacaoPage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                        <span class="inline-block transition-transform duration-200 group-hover:scale-110">Solicitações</span>
+                    </a>
+                    <a href="forumPage.html" class="group font-nunito font-semibold text-black text-[20px] hover:text-brown">
+                        <span class="inline-block transition-transform duration-200 group-hover:scale-110">Fórum</span>
+                    </a>
+                    <a href="configPage.html" class="group relative font-nunito font-semibold text-black text-[22px] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-[70%] after:h-[6px] after:bg-brown after:rounded-full">
+                        <span class="inline-block transition-transform duration-200 group-hover:scale-110">Configuração</span>
+                    </a>        
+                </nav>
+
+                <div class="flex items-center gap-4 lg:gap-6">
+                    <button class="text-black/45 hover:text-black/70 transition-colors" aria-label="Notificações">
+                        <svg width="40" height="40" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2822 12.8031V14.2281C17.9973 17.2154 12.9077 27.0275 13.0924 35.5312L13.0924 40.2543C9.3631 45.0486 9.58253 52.197 18.8866 52.197H25.2822C25.2822 54.1559 26.0456 56.0347 27.4046 57.42C28.7633 58.8053 30.6064 59.5834 32.5282 59.5834C34.45 59.5834 36.2931 58.8053 37.6518 57.42C39.0109 56.0347 39.7741 54.1559 39.7741 52.197H46.1874C55.4737 52.197 55.6083 45.0337 51.8795 40.2394L51.9832 35.5378C52.1709 27.0241 47.0717 17.2033 39.7741 14.2202V12.8031C39.7741 10.8441 39.0109 8.96537 37.6518 7.58016C36.2931 6.19496 34.45 5.41675 32.5282 5.41675C30.6064 5.41675 28.7633 6.19496 27.4046 7.58016C26.0456 8.96537 25.2822 10.8441 25.2822 12.8031ZM34.9435 12.8031C34.9435 12.8531 34.9421 12.903 34.9392 12.9526C34.1524 12.8539 33.351 12.8031 32.538 12.8031C31.7181 12.8031 30.9102 12.8548 30.1175 12.955C30.1145 12.9046 30.1129 12.8539 30.1129 12.8031C30.1129 12.1501 30.3675 11.5239 30.8203 11.0621C31.2732 10.6004 31.8877 10.341 32.5282 10.341C33.1687 10.341 33.7832 10.6004 34.2361 11.0621C34.6892 11.5239 34.9435 12.1501 34.9435 12.8031ZM30.1129 52.197C30.1129 52.85 30.3675 53.4764 30.8203 53.9382C31.2732 54.3997 31.8877 54.6591 32.5282 54.6591C33.1687 54.6591 33.7832 54.3997 34.2361 53.9382C34.6892 53.4764 34.9435 52.85 34.9435 52.197H30.1129ZM46.1874 47.2727C48.2509 47.2727 49.364 44.8054 48.0212 43.2083C47.3688 42.4324 47.021 41.4452 47.0435 40.4317L47.1537 35.4272C47.3382 27.0676 40.7407 17.7273 32.538 17.7273C24.3371 17.7273 17.7404 27.0645 17.9219 35.4221L18.0307 40.4325C18.0527 41.4457 17.7051 42.4326 17.0528 43.2083C15.7098 44.8054 16.8231 47.2727 18.8866 47.2727H46.1874Z" fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button class="text-black/45 hover:text-black/70 transition-colors" aria-label="Perfil">
+                        <svg width="44" height="44" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37 18.5C30.1886 18.5 24.6667 24.0218 24.6667 30.8333C24.6667 37.6447 30.1886 43.1667 37 43.1667C43.8117 43.1667 49.3334 37.6447 49.3334 30.8333C49.3334 24.0218 43.8117 18.5 37 18.5ZM30.8334 30.8333C30.8334 27.4276 33.5942 24.6667 37 24.6667C40.4059 24.6667 43.1667 27.4276 43.1667 30.8333C43.1667 34.2392 40.4059 37 37 37C33.5942 37 30.8334 34.2392 30.8334 30.8333Z" fill="currentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M59.5949 57.9803C53.9645 64.0412 45.925 67.8334 37 67.8334C19.9712 67.8334 6.16663 54.0287 6.16663 37.0001C6.16663 19.9713 19.9712 6.16675 37 6.16675C54.0286 6.16675 67.8333 19.9713 67.8333 37.0001C67.8333 44.9045 64.8588 52.1143 59.9683 57.5712C59.9936 57.6717 60.0183 57.7728 60.0423 57.8746L59.5949 57.9803ZM12.3333 37.0001C12.3333 23.3771 23.3769 12.3334 37 12.3334C50.6231 12.3334 61.6666 23.3771 61.6666 37.0001C61.6666 42.3996 59.9316 47.3937 56.9892 51.4557C56.9759 51.4403 56.963 51.4248 56.9497 51.4094C55.4682 49.6704 53.6487 48.5179 51.6572 47.7615C47.8554 46.3173 43.1608 46.2501 38.5416 46.2501H35.4583C30.8817 46.2501 26.4754 46.305 22.985 47.8136C20.7273 48.7892 18.9888 50.2883 17.6907 52.3508C14.3372 48.138 12.3333 42.8032 12.3333 37.0001ZM22.2954 56.8065C26.4015 59.8599 31.4897 61.6667 37 61.6667C42.9705 61.6667 48.4456 59.5454 52.7126 56.0156C52.5646 55.7933 52.412 55.592 52.256 55.4088C51.5539 54.5849 50.6557 53.9775 49.4677 53.5261C46.911 52.5552 43.3994 52.4167 38.5416 52.4167H35.4583C30.5581 52.4167 27.5292 52.5675 25.4316 53.474C24.2069 54.0034 23.1316 54.8735 22.2954 56.8065Z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex flex-1 w-full relative">
+        
+            <div id="sidebar-overlay" class="fixed inset-0 bg-black/40 z-30 hidden lg:hidden"></div>
+
+            <aside id="settings-sidebar" class="fixed lg:sticky top-0 lg:top-0 left-0 z-40 lg:z-auto w-72 lg:w-[280px] xl:w-[320px] bg-white shadow-[0_10px_20px_2px_rgba(0,0,0,0.34)] rounded-br-[10px] lg:rounded-br-[10px] transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0 h-screen lg:h-[calc(100vh-6rem)] overflow-y-auto pt-6 lg:pt-8">
+                <div class="px-8 lg:px-10 pb-2">
+                </div>
+
+                <nav class="mt-4" id="sidebar-nav">
+                    <div>
+                        <button data-target="view-gerais" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-sgb-brown">Configurações Gerais</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-seguranca" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Segurança</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-privacidade" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Privacidade</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-notificacoes" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Notificações</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-aparencia" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Aparência</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-acessibilidade" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Acessibilidade</button>
+                    </div>
+                    <div>
+                        <div class="mx-8 h-px bg-black/25"></div>
+                        <button data-target="view-suporte" class="sidebar-link w-full text-left px-10 py-5 text-xl lg:text-2xl font-semibold transition-colors hover:bg-black/5 text-black">Central de Suporte</button>
+                    </div>
+                </nav>
+            </aside>
+
+        <main class="flex-1 px-6 md:px-10 xl:px-16 py-8 lg:py-10 min-w-0 max-w-5xl">
+        
+            <button id="open-sidebar-btn" class="lg:hidden mb-6 flex items-center gap-2 text-sgb-brown font-semibold text-base">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
+                Menu de Configurações
+            </button>
+
+            <section class="mb-6 lg:mb-8">
+                <h1 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Configurações</h1>
+                <p class="text-base lg:text-[24px] font-medium text-black mt-1">Gerencie seus dados, segurança, privacidade e preferências do SGB</p>
+            </section>
+
+            <div id="view-gerais" class="view-section block animate-fade-in">
+                <section class="mb-8 lg:mb-10">
+                    <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Configurações Gerais</h2>
+                    <p class="text-base lg:text-[24px] font-medium text-black mt-1">Gerencie suas informações pessoais e dados básicos da conta</p>
+                </section>
+
+                <div class="flex flex-col gap-6 lg:gap-8 max-w-[660px]">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xl lg:text-[26px] font-semibold text-black leading-tight">Nome completo</label>
+                        <input type="text" placeholder="Nome do usuário" class="w-full h-[60px] lg:h-[73px] rounded-[20px] bg-sgb-muted/20 border border-transparent text-lg lg:text-[22px] font-medium text-black/50 placeholder:text-black/50 px-6 outline-none focus:border-sgb-brown/40 focus:bg-sgb-muted/30 transition-all" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xl lg:text-[26px] font-semibold text-black leading-tight">E-mail</label>
+                        <input type="email" placeholder="Email do usuário" class="w-full h-[60px] lg:h-[73px] rounded-[20px] bg-sgb-muted/20 border border-transparent text-lg lg:text-[22px] font-medium text-black/50 placeholder:text-black/50 px-6 outline-none focus:border-sgb-brown/40 focus:bg-sgb-muted/30 transition-all" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xl lg:text-[26px] font-semibold text-black leading-tight">Telefone</label>
+                        <input type="tel" placeholder="Telefone do usuário" class="w-full h-[60px] lg:h-[73px] rounded-[20px] bg-sgb-muted/20 border border-transparent text-lg lg:text-[22px] font-medium text-black/50 placeholder:text-black/50 px-6 outline-none focus:border-sgb-brown/40 focus:bg-sgb-muted/30 transition-all" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xl lg:text-[26px] font-semibold text-black leading-tight">CPF</label>
+                        <input type="text" placeholder="CPF do usuário" class="w-full h-[60px] lg:h-[73px] rounded-[20px] bg-sgb-muted/20 border border-transparent text-lg lg:text-[22px] font-medium text-black/50 placeholder:text-black/50 px-6 outline-none focus:border-sgb-brown/40 focus:bg-sgb-muted/30 transition-all" />
+                    </div>
+                </div>
+
+                <div class="mt-10 lg:mt-12 max-w-[660px] lg:max-w-[832px]">
+                    <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-9">
+                        <h3 class="text-xl lg:text-[26px] font-extrabold text-black">Vínculo com Conta Gov.br</h3>
+                        <p class="text-base lg:text-[20px] font-medium text-sgb-success mt-3 lg:mt-5">*Sua conta está vinculada com sucesso à plataforma Gov.br.</p>
+                        <button class="mt-6 lg:mt-8 bg-sgb-red hover:bg-sgb-red/90 transition-colors rounded-[20px] px-6 lg:px-10 py-4 lg:py-5 text-xl lg:text-[26px] font-bold text-black">Desvincular conta</button>
+                    </div>
+                </div>
+
+                <div class="mt-10 lg:mt-12 flex flex-col sm:flex-row gap-4 max-w-[540px]">
+                    <button class="flex-1 bg-sgb-green hover:bg-sgb-green/90 transition-colors rounded-[20px] py-4 lg:py-5 text-xl lg:text-[26px] font-bold text-black text-center">Salvar Alterações</button>
+                    <button class="bg-sgb-muted/60 hover:bg-sgb-muted/80 transition-colors rounded-[20px] px-8 lg:px-10 py-4 lg:py-5 text-xl lg:text-[26px] font-bold text-black text-center">Cancelar</button>
+                </div>
+            </div>
+
+            <div id="view-seguranca" class="view-section hidden animate-fade-in">
+                <section class="mb-8 lg:mb-10">
+                    <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Segurança</h2>
+                    <p class="text-base lg:text-[24px] font-medium text-black mt-1">Proteja sua conta com senhas fortes e autenticação segura</p>
+                </section>
+
+                <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[660px]">
+                    <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Alterar Senha</h3>
+
+                    <div class="flex flex-col gap-6 lg:gap-8">
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-xl lg:text-[22px] font-semibold text-black">Senha Atual</label>
+                            <div class="relative">
+                                <input type="password" placeholder="Digite sua senha atual" class="w-full h-[60px] lg:h-[70px] rounded-[15px] bg-[#E8E8E8] border border-transparent text-lg font-medium text-black/70 placeholder:text-black/40 px-6 pr-14 outline-none focus:border-sgb-brown/40 transition-all" />
+                                <button class="absolute right-6 top-1/2 -translate-y-1/2 text-black/40 hover:text-black/70" aria-label="Mostrar senha">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-xl lg:text-[22px] font-semibold text-black">Nova Senha</label>
+                            <div class="relative">
+                                <input type="password" placeholder="Digite a nova senha" class="w-full h-[60px] lg:h-[70px] rounded-[15px] bg-[#E8E8E8] border border-transparent text-lg font-medium text-black/70 placeholder:text-black/40 px-6 pr-14 outline-none focus:border-sgb-brown/40 transition-all" />
+                                <button class="absolute right-6 top-1/2 -translate-y-1/2 text-black/40 hover:text-black/70" aria-label="Mostrar senha">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                            </div>
+                            <p class="text-sgb-red text-sm lg:text-base font-semibold mt-1">*Mínimo 8 caracteres, incluir letras números e símbolos</p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-xl lg:text-[22px] font-semibold text-black">Confirmar Senha</label>
+                            <div class="relative">
+                                <input type="password" placeholder="Confirme sua nova senha" class="w-full h-[60px] lg:h-[70px] rounded-[15px] bg-[#E8E8E8] border border-transparent text-lg font-medium text-black/70 placeholder:text-black/40 px-6 pr-14 outline-none focus:border-sgb-brown/40 transition-all" />
+                                    <button class="absolute right-6 top-1/2 -translate-y-1/2 text-black/40 hover:text-black/70" aria-label="Mostrar senha">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                    </button>
+                            </div>
+                        </div>
+                
+                        <div class="flex justify-center mt-4 lg:mt-6">
+                            <button class="bg-sgb-brown hover:bg-sgb-brown/90 transition-colors rounded-[15px] px-10 lg:px-14 py-4 lg:py-5 text-xl lg:text-[22px] font-bold text-white text-center">
+                            Atualizar Senha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div id="view-privacidade" class="view-section hidden animate-fade-in">
+            <section class="mb-8 lg:mb-10">
+            <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Privacidade</h2>
+            <p class="text-base lg:text-[24px] font-medium text-black mt-1">Controle como seus dados são utilizados</p>
+            </section>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 mb-8 max-w-[800px]">
+                <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Compartilhamento de Dados</h3>
+
+            <div class="flex flex-col gap-8">
+                <div class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="44" height="24" rx="12" fill="black"/>
+                    <circle cx="32" cy="12" r="8" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Permitir compartilhamento de dados anônimos</h4>
+                    <p class="text-base text-black/80 mt-1">Compartilhe dados anônimos com institutos de pesquisa para fins estatísticos e melhorias no sistema.</p>
+                </div>
+                </div>
+
+                <div class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="44" height="24" rx="12" fill="black"/>
+                    <circle cx="32" cy="12" r="8" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Ocultar meu nome nos fóruns públicos</h4>
+                    <p class="text-base text-black/80 mt-1">Suas postagens nos fóruns aparecerão sob um pseudônimo, mantendo seu anonimato</p>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[800px]">
+            <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Gerenciamento de Dados Pessoais</h3>
+            
+            <div class="flex flex-col sm:flex-row gap-4 lg:gap-6">
+                <button class="flex items-center justify-center gap-3 bg-[#38BDF8] hover:bg-[#20AEEF] transition-colors rounded-[15px] px-8 py-4 lg:py-5 text-lg lg:text-xl font-bold text-black">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Exportar Meus Dados
+                </button>
+                <button class="flex items-center justify-center gap-3 bg-[#E15A5A] hover:bg-[#D04949] transition-colors rounded-[15px] px-8 py-4 lg:py-5 text-lg lg:text-xl font-bold text-black">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                Excluir Minha Conta
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div id="view-notificacoes" class="view-section hidden animate-fade-in">
+            <section class="mb-8 lg:mb-10">
+            <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Notificações</h2>
+            <p class="text-base lg:text-[24px] font-medium text-black mt-1">Personalize como você recebe atualizações do sistema</p>
+            </section>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[800px]">
+            <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Alertas por E-mail</h3>
+
+            <div class="flex flex-col gap-8">
+                <div class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="44" height="24" rx="12" fill="black"/>
+                    <circle cx="32" cy="12" r="8" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Notificações sobre atualizações nos meus reportes</h4>
+                    <p class="text-base text-black/80 mt-1">Receba e-mails quando seus reportes de problemas urbanos receberem atualizações de status.</p>
+                </div>
+                </div>
+
+                <div class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="44" height="24" rx="12" fill="black"/>
+                    <circle cx="32" cy="12" r="8" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Notificações de novas interações nos fóruns</h4>
+                    <p class="text-base text-black/80 mt-1">Seja notificado quando alguém responder suas postagens ou mencionar você no fórum.</p>
+                </div>
+                </div>
+
+                <div class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="44" height="24" viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="44" height="24" rx="12" fill="black"/>
+                    <circle cx="32" cy="12" r="8" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Alertas críticos da minha região</h4>
+                    <p class="text-base text-black/80 mt-1">Receba notificações urgentes sobre situações críticas que afetam sua região.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div id="view-aparencia" class="view-section hidden animate-fade-in">
+            <section class="mb-8 lg:mb-10">
+            <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Aparência</h2>
+            <p class="text-base lg:text-[24px] font-medium text-black mt-1">Customize a aparência visual do SGB</p>
+            </section>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[800px]">
+            <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Tema</h3>
+
+            <div class="flex flex-col gap-6 ml-4 lg:ml-12">
+                <label class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2.5"/>
+                    <circle cx="12" cy="12" r="6" fill="black"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Padrão</h4>
+                    <p class="text-base text-black/80 mt-1">Segue as preferências do sistema</p>
+                </div>
+                </label>
+
+                <label class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Modo Escuro</h4>
+                    <p class="text-base text-black/80 mt-1">Fundo escuro com textos claros</p>
+                </div>
+                </label>
+
+                <label class="flex gap-4 items-start cursor-pointer">
+                <div class="mt-1 flex-shrink-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-lg lg:text-[22px] font-bold text-black leading-tight">Modo Claro</h4>
+                    <p class="text-base text-black/80 mt-1">Fundo claro com textos escuros</p>
+                </div>
+                </label>
+            </div>
+            </div>
+        </div>
+
+        <div id="view-acessibilidade" class="view-section hidden animate-fade-in">
+            <section class="mb-8 lg:mb-10">
+            <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight">Acessibilidade</h2>
+            <p class="text-base lg:text-[24px] font-medium text-black mt-1">Recursos para melhorar a acessibilidade conforme diretrizes WCAG 2.1</p>
+            </section>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[800px]">
+            <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Tamanho da Fonte</h3>
+
+            <div class="flex flex-col items-center">
+                <div class="w-full bg-[#A3B8CC] rounded-[10px] p-6 lg:p-10 flex items-center justify-between gap-4">
+                <span class="text-2xl font-medium text-black">A</span>
+                
+                <div class="flex-1 relative mx-4">
+                    <div class="w-full h-0.5 bg-[#2E3C4B] absolute top-1/2 -translate-y-1/2"></div>
+                    <div class="w-4 h-4 rounded-full bg-[#1A2530] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer"></div>
+                </div>
+                
+                <span class="text-4xl font-medium text-black">A</span>
+                </div>
+                
+                <p class="text-sm lg:text-base font-bold text-black mt-4">Ajuste o tamanho da fonte para melhor legibilidade</p>
+            </div>
+            </div>
+        </div>
+
+        <div id="view-suporte" class="view-section hidden animate-fade-in">
+            <section class="mb-8 lg:mb-10 flex items-center gap-4">
+            <div>
+                <h2 class="text-2xl lg:text-[30px] font-bold text-black leading-tight flex items-center gap-3">
+                Central de Suporte
+                <a href="#" class="hover:opacity-70 transition-opacity">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mt-1">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                </svg>
+                </a>
+                </h2>
+                <p class="text-base lg:text-[24px] font-medium text-black mt-1">Reporte problemas da plataforma por aqui.</p>
+            </div>
+            </section>
+
+            <div class="bg-[#F4F4F4] rounded-[20px] shadow-[4px_4px_20px_rgba(0,0,0,0.25)] p-6 lg:p-10 max-w-[800px]">
+            <h3 class="text-xl lg:text-[26px] font-bold text-black mb-8">Reportar um problema</h3>
+
+            <div class="flex flex-col gap-6 lg:gap-8">
+                <div class="flex flex-col gap-2">
+                <label class="text-lg lg:text-[20px] font-bold text-black">Título do Problema <span class="text-black">*</span></label>
+                <input type="text" placeholder="Descreva brevemente o problema" class="w-full h-[55px] lg:h-[60px] rounded-[10px] bg-[#E5E0DA] border border-transparent text-base font-medium text-black/70 placeholder:text-black/40 px-6 outline-none focus:border-sgb-brown/40 transition-all" />
+                </div>
+
+                <div class="flex flex-col gap-2">
+                <label class="text-lg lg:text-[20px] font-bold text-black">Descrição Detalhada <span class="text-black">*</span></label>
+                <textarea placeholder="Escreva os detalhes" class="w-full h-[120px] lg:h-[140px] rounded-[10px] bg-[#E5E0DA] border border-transparent text-base font-medium text-black/70 placeholder:text-black/40 p-6 outline-none focus:border-sgb-brown/40 transition-all resize-none"></textarea>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                <label class="text-lg lg:text-[20px] font-bold text-black">Seu E-mail de Contato <span class="text-black">*</span></label>
+                <input type="email" placeholder="Digite seu email" class="w-full h-[55px] lg:h-[60px] rounded-[10px] bg-[#E5E0DA] border border-transparent text-base font-medium text-black/70 placeholder:text-black/40 px-6 outline-none focus:border-sgb-brown/40 transition-all" />
+                </div>
+                
+                <div class="flex justify-center mt-4">
+                <button class="bg-[#5B3A29] hover:bg-[#4A2F21] transition-colors rounded-[15px] px-10 lg:px-14 py-4 lg:py-5 text-xl font-bold text-white text-center">
+                    Enviar Relatório
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+            </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const views = document.querySelectorAll('.view-section');
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // 1. Atualiza a cor de ativo/inativo no menu lateral
+                sidebarLinks.forEach(l => {
+                    l.classList.remove('text-sgb-brown');
+                    l.classList.add('text-black');
+                });
+                e.currentTarget.classList.remove('text-black');
+                e.currentTarget.classList.add('text-sgb-brown');
+
+                // 2. Troca o conteúdo exibido na direita
+                const targetId = e.currentTarget.getAttribute('data-target');
+            
+                views.forEach(view => {
+                    view.classList.remove('block');
+                    view.classList.add('hidden');
+                });
+
+                const activeView = document.getElementById(targetId);
+                if(activeView) {
+                    activeView.classList.remove('hidden');
+                    activeView.classList.add('block');
+                }
+            });
+        });
+    });
+    </script>
+    </body>
+</html>

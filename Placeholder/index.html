@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SGB</title>
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="loginRegisterBox">
+                <h1 style="text-align: center; font-size: 26px;">Entrar</h1>
+
+                <input class="inputstyle" type="email" id="email" placeholder="E-mail"/>
+                <input class="inputstyle" type="password" id="password" placeholder="Senha"/>
+
+                <p class="error-message" id="errorMessage">Por favor, preencha todos os campos.</p>
+                <button class="buttonstyle" type="submit" id="loginBtn">Entrar</button>
+
+                <p>Não tem uma conta? <a href="registerPage.html">Registre-se aqui.</a></p>
+                <p style="margin-top: 60px; text-align: center; font-size: 20px;">
+                    ou entre com sua conta <a href="https://sso.acesso.gov.br/login"><img src="Images/govBr.png" alt="Gov.Br" class="govBr"/></a>
+                </p>
+
+                <script>
+                    const loginBtn = document.getElementById("loginBtn");
+                    const errorMsg = document.getElementById("errorMessage");
+
+                    // Expressão regular simples para validar o formato do e-mail
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    loginBtn.addEventListener("click", function(event) {
+                        // Evita o recarregamento da página se estiver dentro de um formulário
+                        event.preventDefault(); 
+
+                        const email = document.getElementById("email").value.trim();
+                        const password = document.getElementById("password").value.trim();
+
+                        // 1. Verifica se os campos não estão vazios
+                        if (email && password) {
+                            
+                            // 2. Verifica se o e-mail tem um formato válido
+                            if (emailRegex.test(email)) {
+                                window.location.href = "homePage.html";
+                            } else {
+                                // Mostra erro de e-mail inválido
+                                errorMsg.textContent = "Por favor, insira um e-mail válido.";
+                                errorMsg.style.display = "block";
+                            }
+
+                        } else {
+                            // Mostra erro de campos vazios
+                            errorMsg.textContent = "Por favor, preencha todos os campos.";
+                            errorMsg.style.display = "block";
+                        }
+                    });
+                </script>
+            </div>
+        </header>
+    </main>
+</body>
+
+</html>
